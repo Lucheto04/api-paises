@@ -9,9 +9,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="./css/normalize.css">
-    <link rel="stylesheet" href="./css/main.css">
-    <script src="./js/darck-mode.js" defer></script>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/custom-select.css">
+    <script src="js/darck-mode.js" defer></script>
+    <script src="js/custom-select.js" defer></script>
+    <script src="js/app.js" defer></script>
+    <script src="js/formulario.js" defer></script>
 </head>
 <body>
     <nav class="navbar">
@@ -25,13 +29,14 @@
     </nav>
 
     <header class="container filter-content my-2">
-        <form class="form-search">
+        <form class="form-search" id="formulario">
             <i class="fa-solid fa-magnifying-glass"></i>
-            <input type="text" placeholder="Ingresa País">
+            <input type="text" placeholder="Ingresa País" id="inputFormulario">
         </form>
-        <div>
+        <div class="custom-select" style="width: 200px;">
             <select>
                 <option value="">Filtrar por Región</option>
+                <option value="">Todos</option>
                 <option value="Africa">África</option>
                 <option value="Americas">Americas</option>
                 <option value="Asia">Asia</option>
@@ -41,98 +46,8 @@
         </div>
     </header>
 
-    <main class="container grid">
-        <article class="card">
-            <img src="https://flagcdn.com/es.svg" alt="" class="img-fluid">
-            <div class="card-content">
-                <h3>Nombre </h3>
-                <p>
-                    <b>Population: </b>
-                    500000
-                </p>
-                <p>
-                    <b>Capital: </b>
-                    Madrid
-                </p>
-                <p>
-                    <b>Regionn: : </b>
-                    Europa
-                </p>
-            </div>
-        </article>
-        <article class="card">
-            <img src="https://flagcdn.com/es.svg" alt="" class="img-fluid">
-            <div class="card-content">
-                <h3>Nombre </h3>
-                <p>
-                    <b>Population: </b>
-                    500000
-                </p>
-                <p>
-                    <b>Capital: </b>
-                    Madrid
-                </p>
-                <p>
-                    <b>Regionn: : </b>
-                    Europa
-                </p>
-            </div>
-        </article>
-        <article class="card">
-            <img src="https://flagcdn.com/es.svg" alt="" class="img-fluid">
-            <div class="card-content">
-                <h3>Nombre </h3>
-                <p>
-                    <b>Population: </b>
-                    500000
-                </p>
-                <p>
-                    <b>Capital: </b>
-                    Madrid
-                </p>
-                <p>
-                    <b>Regionn: : </b>
-                    Europa
-                </p>
-            </div>
-        </article>
-        <article class="card">
-            <img src="https://flagcdn.com/es.svg" alt="" class="img-fluid">
-            <div class="card-content">
-                <h3>Nombre </h3>
-                <p>
-                    <b>Population: </b>
-                    500000
-                </p>
-                <p>
-                    <b>Capital: </b>
-                    Madrid
-                </p>
-                <p>
-                    <b>Regionn: : </b>
-                    Europa
-                </p>
-            </div>
-        </article>
-        <article class="card">
-            <img src="https://flagcdn.com/es.svg" alt="" class="img-fluid">
-            <div class="card-content">
-                <h3>Nombre </h3>
-                <p>
-                    <b>Population: </b>
-                    500000
-                </p>
-                <p>
-                    <b>Capital: </b>
-                    Madrid
-                </p>
-                <p>
-                    <b>Regionn: : </b>
-                    Europa
-                </p>
-            </div>
-        </article>
-        <article class="card">
+    <main class="container grid" id="banderas">
+        <article class="card"> 
             <img src="https://flagcdn.com/es.svg" alt="" class="img-fluid">
             <div class="card-content">
                 <h3>Nombre </h3>
